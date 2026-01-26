@@ -7,6 +7,7 @@
 
 🛠️ Technologies Used:
     Python
+    
     NumPy
     OpenCV / Pillow
     Jupyter Notebook
