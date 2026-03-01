@@ -1,57 +1,55 @@
-To make your Steganography project stand out, your README should look like a professional open-source project. This version uses Markdown to create a clear hierarchy, adds a technical explanation, and includes a section for "How to Run" which is vital for anyone checking your code.
+# 🕵️‍♂️ Stegano-Secure: Image Data Hiding
 
-Copy and paste this into your README.md on GitHub:
+---
 
-🕵️‍♂️ Image Steganography using Python
-A robust implementation of Least Significant Bit (LSB) Steganography. This tool allows users to hide secret text messages within digital images and extract them later without altering the visual appearance of the file.
+## 🚀 Explore the Repository
 
-📌 Project Overview
-This project explores the intersection of Image Processing and Cybersecurity. By manipulating the pixel-level data of an image, we can embed information that is invisible to the human eye but easily readable by the decoder.
+* **Project Type:** Cybersecurity & Image Processing
+* **Methodology:** LSB (Least Significant Bit) Encoding
+* **Input Formats:** PNG, BMP (Lossless images)
 
-🛠️ Tech Stack
-Language: Python
+---
 
-Core Libraries: * NumPy: Used for high-speed pixel array manipulations.
+## 🛠️ Tech Stack
 
-OpenCV & Pillow: Used for advanced image reading and writing.
+* **Language:** Python
+* **Data Processing:** NumPy (for pixel array manipulation)
+* **Image Handling:** OpenCV & Pillow
+* **Workflow:** Jupyter Notebook
 
-Environment: Jupyter Notebook
+---
 
-⚙️ Key Features
-Secret Encoding: Embed text into PNG/BMP images with zero visual degradation.
+## ⚙️ Features
 
-Secure Decoding: Extract hidden messages accurately from stego-images.
+* **Encrypted Embedding:** Convert text messages into binary and weave them into image pixels.
+* **Invisible Results:** The "Stego-Image" remains 100% visually identical to the original.
+* **Secure Extraction:** A dedicated decoding process to retrieve messages only when the image is processed by the script.
+* **Pixel Precision:** High-speed manipulation using NumPy for efficient processing.
 
-Lossless Compression: Uses techniques that ensure the image quality remains identical to the original.
+---
 
-Beginner Friendly: Well-commented code designed for academic learning and digital forensics.
+## 🧠 How It Works (The Logic)
 
-🧠 How It Works (LSB Technique)
-The project utilizes the Least Significant Bit (LSB) method. In a standard 8-bit image, changing the last bit of a pixel's color value results in a change so minute (1/255th) that it is mathematically imperceptible to the human eye.
+This project operates on the **8-bit color depth** of digital images. 
 
-Binary Conversion: The secret message is converted into a binary string.
 
-Pixel Modification: The LSB of the Red, Green, or Blue channels is replaced by a bit from the secret message.
 
-Reconstruction: During decoding, the LSBs are collected and reassembled into the original text.
+1. **Each pixel** has Red, Green, and Blue values (0-255).
+2. We change only the **last bit** (the Least Significant Bit) of these values.
+3. Mathematically, changing `11111111` (255) to `11111110` (254) is a change of only **0.3%** in color—completely invisible to the human eye!
 
-🚀 Getting Started
-Prerequisites
-Ensure you have Python installed, then install the required dependencies:
+---
 
-Bash
-pip install opencv-python numpy Pillow
-Usage
-Clone the repository:
+## 📂 File Structure
 
-Bash
-git clone https://github.com/kothapallivennela/Steganography.git
-Open the Jupyter Notebook.
+* **`Steganography.ipynb`** - The main logic for encoding and decoding.
+* **`sample_images/`** - Test images used for the project.
+* **`requirements.txt`** - List of necessary Python libraries.
 
-Follow the cells to Encode your message into an image.
+---
 
-Use the Decode function to reveal the secret!
+## 🚀 How to Run Locally
 
-👩‍💻 Author
-Vennela Sri Sai Bhargavi Kothapalli B.Tech Computer Science Student LinkedIn Profile | Portfolio Sitegavi Kothapalli
-    B.Tech Computer Science Student
+### 1. Clone the repo:
+```bash
+git clone [https://github.com/kothapallivennela/Steganography.git](https://github.com/kothapallivennela/Steganography.git) Student
